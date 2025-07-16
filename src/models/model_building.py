@@ -18,6 +18,6 @@ xgb_model = xgb.XGBClassifier(use_label_encoder=params.get('use_label_encoder'),
 xgb_model.fit(X_train_bow, y_train)
 
 
-joblib.dump(xgb_model, 'model.joblib')
+joblib.dump(xgb_model, 'models/model.joblib')
 
 

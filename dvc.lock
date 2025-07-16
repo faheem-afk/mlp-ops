@@ -65,14 +65,14 @@ stages:
       nfiles: 2
     - path: src/models/model_building.py
       hash: md5
-      md5: 1059e62fd17f5d215b2ec12d6f15a23e
-      size: 566
+      md5: 4f6f926d6037e8571b092d76e170093f
+      size: 573
     params:
       params.yaml:
         model_building.eval_metric: mlogloss
         model_building.use_label_encoder: false
     outs:
-    - path: model.joblib
+    - path: models/model.joblib
       hash: md5
       md5: 5950123f27492d427830b4e89ff076fd
       size: 159057
@@ -84,14 +84,14 @@ stages:
       md5: 7fe996d494b75073615b37783f80c98a.dir
       size: 10396536
       nfiles: 2
-    - path: model.joblib
+    - path: models/model.joblib
       hash: md5
       md5: 5950123f27492d427830b4e89ff076fd
       size: 159057
     - path: src/models/evaluation.py
       hash: md5
-      md5: 657fe5f79584b346d119385e2a1de334
-      size: 1374
+      md5: f7323e71e1cbf04d009ebb2ec17e83d2
+      size: 1381
     outs:
     - path: results.json
       hash: md5

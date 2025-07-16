@@ -21,7 +21,7 @@ import joblib
 warnings.filterwarnings('ignore')
 
 
-xgb_model = joblib.load('model.joblib')
+xgb_model = joblib.load('models/model.joblib')
 
 test_bow = pd.read_csv(f"data/features/test_bow.csv")
 
