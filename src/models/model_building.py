@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 
 params = yaml.safe_load(open('params.yaml', 'r'))['model_building']
 
-train_bow = pd.read_csv(f"data/features/train_bow.csv")
+train_bow = pd.read_csv(f"data/features/train_tfidf.csv")
 
 X_train_bow = train_bow.iloc[:, :-1].values
 y_train = train_bow.iloc[:, -1].values

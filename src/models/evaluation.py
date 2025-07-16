@@ -23,7 +23,7 @@ warnings.filterwarnings('ignore')
 
 xgb_model = joblib.load('models/model.joblib')
 
-test_bow = pd.read_csv(f"data/features/test_bow.csv")
+test_bow = pd.read_csv(f"data/features/test_tfidf.csv")
 
 X_test_bow = test_bow.iloc[:, :-1].values
 y_test = test_bow.iloc[:, -1].values

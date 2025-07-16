@@ -44,29 +44,29 @@ stages:
       nfiles: 2
     - path: src/features/feature_engineering.py
       hash: md5
-      md5: 620d945153f4ebd1b913788c654ac5a2
-      size: 1285
+      md5: 7fe54c6b318698cd8595b89ed41d3e8f
+      size: 1289
     params:
       params.yaml:
         feature_engineering.max_features: 500
     outs:
     - path: data/features
       hash: md5
-      md5: 7fe996d494b75073615b37783f80c98a.dir
-      size: 10396536
+      md5: 80bfe4da2abfe990d447037def4c5452.dir
+      size: 21476148
       nfiles: 2
   model_building:
     cmd: python src/models/model_building.py
     deps:
     - path: data/features
       hash: md5
-      md5: 7fe996d494b75073615b37783f80c98a.dir
-      size: 10396536
+      md5: 80bfe4da2abfe990d447037def4c5452.dir
+      size: 21476148
       nfiles: 2
     - path: src/models/model_building.py
       hash: md5
-      md5: 4f6f926d6037e8571b092d76e170093f
-      size: 573
+      md5: 79a0c2bce7de19d50771085b8c75c168
+      size: 575
     params:
       params.yaml:
         model_building.eval_metric: mlogloss
@@ -74,26 +74,26 @@ stages:
     outs:
     - path: models/model.joblib
       hash: md5
-      md5: 5950123f27492d427830b4e89ff076fd
-      size: 159057
+      md5: e84a59773ebdbbc870f2eb235cb8d73b
+      size: 166333
   evaluation:
     cmd: python src/models/evaluation.py
     deps:
     - path: data/features
       hash: md5
-      md5: 7fe996d494b75073615b37783f80c98a.dir
-      size: 10396536
+      md5: 80bfe4da2abfe990d447037def4c5452.dir
+      size: 21476148
       nfiles: 2
     - path: models/model.joblib
       hash: md5
-      md5: 5950123f27492d427830b4e89ff076fd
-      size: 159057
+      md5: e84a59773ebdbbc870f2eb235cb8d73b
+      size: 166333
     - path: src/models/evaluation.py
       hash: md5
-      md5: f7323e71e1cbf04d009ebb2ec17e83d2
-      size: 1381
+      md5: bbb9a94396b2a3c4b4b62782f3a118e0
+      size: 1383
     outs:
     - path: results.json
       hash: md5
-      md5: e6f9af73fbc862eb7237171ce19ff44a
+      md5: af55f66e7d645662b0b14f61fd7998ed
       size: 14634
