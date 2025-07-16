@@ -1,0 +1,9 @@
+joblib==1.5.0
+nltk==3.9.1
+numpy==1.23.5
+pandas==1.5.3
+PyYAML==6.0.2
+PyYAML==6.0.2
+scikit_learn==1.7.0
+setuptools==80.1.0
+xgboost==3.0.2
