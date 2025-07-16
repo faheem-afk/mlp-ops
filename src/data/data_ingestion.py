@@ -4,30 +4,29 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import warnings
 import yaml
-from exceptions.exceptions import CustomException
-import logging
+
+# from src.exceptions import cust_exceptions
+# import logging
 
 
-logger = logging.getLogger('data_ingestion')
-logger.setLevel('INFO')
+# logger = logging.getLogger('data_ingestion')
+# logger.setLevel('INFO')
 
-console_handler = logging.StreamHandler()
-console_handler.setLevel('INFO')
+# console_handler = logging.StreamHandler()
+# console_handler.setLevel('INFO')
 
-console_handler.setFormatter("%(asctime)s - %(name)s - %(levelname)s %(message)s")
+# console_handler.setFormatter("%(asctime)s - %(name)s - %(levelname)s %(message)s")
 
-logger.addHandler(console_handler)
+# logger.addHandler(console_handler)
 
 
 warnings.filterwarnings('ignore')
 
 
 def load_params(param_path: str) -> float:
-    try:
-        test_size = yaml.safe_load(open(param_path, 'r'))['data_ingestion']['test_size']
-    except Exception as e:
-        logger.info(CustomException(e))
-        raise CustomException(e)
+
+    test_size = yaml.safe_load(open(param_path, 'r'))['data_ingestion']['test_size']
+
     return test_size
 
 def read_data(url: str) -> pd.DataFrame:

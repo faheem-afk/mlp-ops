@@ -1,0 +1,9 @@
+data_ingestion:
+  test_size: 0.2
+
+feature_engineering:
+  max_features: 500
+  
+model_building:
+  use_label_encoder: False
+  eval_metric: 'mlogloss'
