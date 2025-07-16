@@ -32,12 +32,12 @@ stages:
     - model_building.use_label_encoder
     - model_building.eval_metric
     outs:
-    - model.joblib
+    - models/model.joblib
   evaluation:
     cmd: python src/models/evaluation.py
     deps:
     - data/features
-    - model.joblib
+    - models/model.joblib
     - src/models/evaluation.py
     metrics:
     - results.json:
