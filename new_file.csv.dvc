@@ -1,5 +1,5 @@
 outs:
-- md5: 3221c736531fb1151f6fa8fca8e72ae9
-  size: 7
+- md5: 12c180931b516947c94c44ca84261817
+  size: 4
   hash: md5
   path: new_file.csv
